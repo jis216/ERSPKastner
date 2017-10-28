@@ -18,7 +18,7 @@ def main():
 
     #points = len(s1);
 
-    timeArray = np.arange(start, end, 1)
+    timeArray = np.arange(0, end-start, 1)
     timeArray = timeArray / sampFreq
     #timeArray = timeArray
 
@@ -29,16 +29,17 @@ def main():
     #plt.title('Signal Wave')
     ax1.plot(timeArray, s1)
     plt.ylabel('Amplitude')
-
+    plt.xlim(0,duration)
 
     #--- Figure 2. ---#
-    ax2 = fig.add_subplot(212)
+    ax2 = fig.add_subplot(212, sharex=ax1)
     f, t, Sxx = signal.spectrogram(s1, sampFreq, nperseg=512)
 
 
     plt.pcolormesh(t, f/1000, safe_log(Sxx))
     plt.ylabel('Frequency [kHz]')
-    plt.ylim(0,20);
+    plt.ylim(0,20)
+    plt.xlim(0,duration)
     plt.xlabel('Time (s)')
     plt.clim(-10, 0)
     #cb = plt.colorbar()
