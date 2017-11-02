@@ -37,7 +37,7 @@ def main():
     
     #--- Figure 2. ---#
     f, t, Sxx = signal.spectrogram(s1, sampFreq, nperseg=512)
-    im = ax2.pcolormesh(t, f/1000, safe_log(Sxx) )
+    im = ax2.pcolormesh(t, f/1000, safe_log(Sxx), cmap='jet' )
 
     ax2.set_ylabel('Frequency [kHz]')
     ax2.set_ylim(0,20)
@@ -45,7 +45,7 @@ def main():
     ax2.set_xlabel('Time (s)')
     ax2.margins(x=0)
 
-    im.set_clim(-10, 0)
+    im.set_clim(-6, 0)
 
     mappable = im
     cb = plt.colorbar(mappable = mappable, cax = ax3)
