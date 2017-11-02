@@ -2,6 +2,7 @@ import numpy as np
 from scipy.io.wavfile import read
 from scipy import signal
 import matplotlib.pyplot as plt
+import matplotlib.axes as matax
 import sys
 
 def main():
@@ -23,29 +24,34 @@ def main():
     #timeArray = timeArray
 
     fig = plt.figure()
-
+    #fig, axes = plt.subplots(nrows=2, ncols=1)
+    ax1 = fig.add_axes( [0.12, 0.55, 0.75, 0.4] )
+    ax2 = fig.add_axes( [0.12, 0.1, 0.75, 0.4] )
+    ax3 = fig.add_axes( [0.88, 0.1, 0.02, 0.4] )
+    
     #--- Figure 1. ---#
-    ax1 = fig.add_subplot(211)
-    #plt.title('Signal Wave')
     ax1.plot(timeArray, s1)
-    plt.ylabel('Amplitude')
-    plt.xlim(0,duration)
-
+    ax1.set_ylabel('Amplitude')
+    ax1.set_xlim(0, duration)
+    ax1.margins(x=0)
+    
     #--- Figure 2. ---#
-    ax2 = fig.add_subplot(212, sharex=ax1)
     f, t, Sxx = signal.spectrogram(s1, sampFreq, nperseg=512)
+    im = ax2.pcolormesh(t, f/1000, safe_log(Sxx) )
 
+    ax2.set_ylabel('Frequency [kHz]')
+    ax2.set_ylim(0,20)
+    ax2.set_xlim(0, duration)
+    ax2.set_xlabel('Time (s)')
+    ax2.margins(x=0)
 
-    plt.pcolormesh(t, f/1000, safe_log(Sxx))
-    plt.ylabel('Frequency [kHz]')
-    plt.ylim(0,20)
-    plt.xlim(0,duration)
-    plt.xlabel('Time (s)')
-    plt.clim(-10, 0)
-    #cb = plt.colorbar()
-    #cb.set_label('db/Hz')
+    im.set_clim(-10, 0)
 
-    plt.show(1)
+    mappable = im
+    cb = plt.colorbar(mappable = mappable, cax = ax3)
+    cb.set_label('db/Hz')
+
+    plt.show()
 
 def safe_log(x):
     result = 0;
