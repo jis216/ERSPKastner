@@ -45,7 +45,7 @@ def main():
     ax2.set_xlabel('Time (s)')
     ax2.margins(x=0)
 
-    im.set_clim(-6, 0)
+    im.set_clim(-10, 0)
 
     mappable = im
     cb = plt.colorbar(mappable = mappable, cax = ax3)
