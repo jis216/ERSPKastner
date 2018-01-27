@@ -5,5 +5,8 @@ Bilguun Bulgan
 Caitlyn Liu
 Isaac Castillo
 Jiayue Sun
-Yidi Qi
+
+Instructors:
+Ryan Kastner
+Perry Naughton
 
