@@ -1,0 +1,24 @@
+/* style.css */
+
+html, body {
+  height: 100%;
+  display: flex;
+}
+
+#canvas {
+  display: flex;
+  margin: 100;
+}
+
+h1{
+  display: flex;
+}
+
+#stats{
+}
+
+
+  /* This centers our sketch horizontally. */
+
+  /* This centers our sketch vertically. *
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>SNAP SIMULATION</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="p5/p5.min.js"></script>
+    <script src="p5/addons/p5.dom.min.js"></script>
+
+    <script src="snapSim.js"></script>
+  </head>
+  <body>
+    <div id=canvas></div>
+    <div id=stats>
+    <h1>SNAP SIMULATION</h1>
+    <p id=direct> DIRECT PATH LENGTH: </p>
+    <p id=directtime> DIRECT PATH TIME: </p>
+<!--   <p id=directsamps> DIRECT PATH SAMPLE COUNT: </p> -->
+
+    <p id=angle> ANGLE OF REFLECTION: </p>
+    <p id=angle2> ANGLE OF REFLECTION 2: 0 </p>
+
+    <p id=surface> SURFACE PATH LENGTH: </p>
+    <p id=surfacetime> SURFACE PATH TIME: </p>
+    <p id=surfacesamps> SURFACE PATH SAMPLE COUNT: </p>
+
+    <p id=total> TOTAL PATH LENGTH: </p>
+    <p id=totaltime> TOTAL PATH TIME: </p>
+    <p id=totalsamps> TOTAL PATH SAMPLE COUNT: </p>
+
+
+
+    <p>Change METER:PIXEL ratio (default 10)</p><input type="text" id="ratio"></>
+    <button id="change" onclick =changeRatio()>CHANGE</button>
+
+  </div>
+  </body>
+</html>
