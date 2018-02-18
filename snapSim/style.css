@@ -6,8 +6,7 @@ html, body {
 }
 
 #canvas {
-  display: flex;
-  margin: 100;
+
 }
 
 h1{
@@ -15,10 +14,10 @@ h1{
 }
 
 #stats{
+  width: 50%;
 }
 
 
   /* This centers our sketch horizontally. */
 
-  /* This centers our sketch vertically. *
-}
+  /* This centers our sketch vertically. */

@@ -9,15 +9,16 @@
     <script src="snapSim.js"></script>
   </head>
   <body>
-    <div id=canvas></div>
     <div id=stats>
-    <h1>SNAP SIMULATION</h1>
+    <h2>SNAP SIMULATION</h2>
+    <p id=depth>DEPTH: </p>
     <p id=direct> DIRECT PATH LENGTH: </p>
     <p id=directtime> DIRECT PATH TIME: </p>
 <!--   <p id=directsamps> DIRECT PATH SAMPLE COUNT: </p> -->
 
-    <p id=angle> ANGLE OF REFLECTION: </p>
-    <p id=angle2> ANGLE OF REFLECTION 2: 0 </p>
+    <p id=angle> 1ST ANGLE OF REFLECTION: </p>
+    <p id=angle2> 2ND ANGLE OF REFLECTION: 0 </p>
+    <p id=angle3> 2ND ANGLE OF REFLECTION 2: 0 </p>
 
     <p id=surface> SURFACE PATH LENGTH: </p>
     <p id=surfacetime> SURFACE PATH TIME: </p>
@@ -29,9 +30,11 @@
 
 
 
-    <p>Change METER:PIXEL ratio (default 10)</p><input type="text" id="ratio"></>
-    <button id="change" onclick =changeRatio()>CHANGE</button>
+    <p>Change METER:PIXEL ratio (default 5)</p><input type="text" id="ratio"></>
+    <button id="change" onclick =basic()>CHANGE</button>
 
   </div>
+  <div id=canvas></div>
+
   </body>
 </html>
