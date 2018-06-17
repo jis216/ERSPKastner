@@ -33,8 +33,11 @@ A notebook highlighting ways to isolate a shrimp sound from other noises, and ho
 ### part2_snapCorrelation.ipynb
 In this notebook you can generated the plots that show peak detection across four AUVs and how the csv files in PeakTImeLocationData are generated.
 
-### par3_shrimpEstimation.ipynb
-In this document we present one model for recovering the position of a snapping shrimp. In this model, we do gradient descent over the loss function that is the least squares of time difference between signal arrivals. The plots that show how radius and noise will influence the estimation results are also listed.
+### part3_shrimpEstimation.ipynb
+In this notebook we present one model for recovering the position of a snapping shrimp. In this model, we do gradient descent over the loss function that is the least squares of time difference between signal arrivals. The plots that show how radius and noise will influence the estimation results are also listed.
+
+### part4_realShrimpEstimation.ipynb
+In this notebook, we run our algorithm from part3 on real_data that has been collected.
 
 ## Data
 All the data we used are in the two folders locationData/ and PeakTimeLocationData/
