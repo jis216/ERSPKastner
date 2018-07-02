@@ -22,7 +22,8 @@ All of our code is in the Github Repository:
 https://github.com/jis216/ERSPKastner
 
 This is a forked repository of the original repo that clean and wrapped up the code in a more reader-friendly way. You can go to the original one to see all the intermediate files and documentation we generated during development process.
-Setup
+
+## Setup
 Python 3.6.5
 Jupyter notebook
 
